@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 # Копируем файл зависимостей в текущую директорию
 COPY requirements.txt ./
 
+RUN python3 -m pip install --user --upgrade pip
+
 # Устанавливаем зависимости
 RUN pip3 install --no-cache-dir --default-timeout=100 -r requirements.txt
 
