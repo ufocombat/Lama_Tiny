@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 
 # Устанавливаем зависимости
-RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt
+RUN pip3 install --no-cache-dir --default-timeout=100 -r requirements.txt
 
 # Устанавливаем Uvicorn для запуска нашего приложения
 RUN pip install uvicorn
